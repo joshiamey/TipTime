@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity() {
     private fun calculateTip() {
 
         try {
-            val costInText = binding.costOfService.text.toString()
+            val costInText = binding.costOfServiceEditText.text.toString()
             val cost = costInText.toDouble()
 
             val percentTip = when(binding.tipOptions.checkedRadioButtonId) {
-                R.id.option_fifteen_percent -> 0.15
-                R.id.option_twenty_percent -> 0.20
-                else -> 0.10
+                R.id.option_good_service -> 0.18
+                R.id.option_amazing_service -> 0.20
+                else -> 0.15
             }
 
             var tip = percentTip * cost
