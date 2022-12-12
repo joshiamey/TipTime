@@ -57,7 +57,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/cost_of_service"
         app:layout_constraintTop_toBottomOf="@+id/cost_of_service"
-        app:layout_constraintStart_toEndOf="@+id/icon_service_question"/>
+        app:layout_constraintStart_toEndOf="@+id/icon_service_question"
+        style="@style/Widget.TipTime.TextView"/>
 
     <RadioGroup
         android:id="@+id/tip_options"
@@ -66,7 +67,8 @@
         android:checkedButton="@id/option_good_service"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="@+id/service_question"
-        app:layout_constraintTop_toBottomOf="@+id/service_question">
+        app:layout_constraintTop_toBottomOf="@+id/service_question"
+        >
 
         <RadioButton
             android:id="@+id/option_amazing_service"
@@ -102,10 +104,10 @@
         android:id="@+id/round_up_switch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:checked="true"
         android:text="@string/round_up_tip"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"
         app:layout_constraintStart_toEndOf="@+id/icon_round_up"
         app:layout_constraintStart_toStartOf="@id/tip_options"
         app:layout_constraintTop_toBottomOf="@id/tip_options" />
@@ -123,14 +125,15 @@
 
     <TextView
         android:id="@+id/result_text_view"
+        style="@style/Widget.TipTime.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/tip_amount_text"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate_button"
-        tools:text="Tip Amount: $10"
-        />
+        tools:text="Tip Amount: $10" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
